@@ -105,29 +105,3 @@ Variable data types were reviewed and corrected where necessary:
 •	Date or categorical fields were properly formatted.
 
 The cleaned dataset provides a reliable foundation for exploratory data analysis and predictive modeling.
-
-## Exploratory Data Analysis (EDA)
-
-The exploratory analysis was conducted using the ExploratoryDataAnalysis.ipynb notebook. The objective of the EDA was to understand the structure of the data, identify patterns, detect anomalies, and explore relationships between variables and the target outcome.
-
-The following aspects of the dataset were examined:
-
-•	Distribution of Income: the income variable was analyzed to understand its distribution, detect skewness, and identify potential outliers. Summary statistics and visualizations were used to evaluate income spread across applicants.
-
-•	Credit Score Patterns: credit score distributions were examined to observe differences between approved and rejected applicants. Comparisons helped identify whether higher credit scores are associated with higher approval probability.
-
-•	Approval Rate: The overall proportion of approved versus rejected applications was analyzed. Approval rates were also segmented by key variables such as income level, employment status, and credit history to identify trends.
-
-•	Correlation Matrix: A correlation matrix was computed for numerical variables to evaluate linear relationships between features, to identify which variables are most strongly associated with the target variable and detect potential multicollinearity issues.
-
-The exploratory analysis revealed several important insights:
-
-•	Higher credit scores are strongly associated with increased approval rates.
-
-•	Applicants with stable employment and higher income levels tend to have a greater likelihood of approval.
-
-•	Certain financial variables show moderate correlation with the target variable.
-
-•	The dataset may exhibit some imbalance between approved and rejected applications.
-
-Overall, the EDA provided a clearer understanding of the drivers behind credit approval decisions and laid the foundation for future predictive modeling.
