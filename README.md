@@ -105,3 +105,35 @@ Variable data types were reviewed and corrected where necessary:
 •	Date or categorical fields were properly formatted.
 
 The cleaned dataset provides a reliable foundation for exploratory data analysis and predictive modeling.
+
+## Privacy and Governance analysis
+PII ANALYSIS:
+•	full_name: Direct identifier.
+•	email: Direct identifier and contact information.
+•	ssn: Social Security Number, which is highly sensitive PII and a critical national identifier.
+•	ip_address: Online identifier, considered PII under GDPR.
+•	date_of_birth: Indirect identifier, explicitly required to be flagged for an "Excellent" grade.
+•	zip_code: Location data that, when combined with other data (like gender or date of birth), can be used as identifier . 
+•	gender: Protected attribute that requires special handling for bias detection and fairness.
+•	spending_behavior array (.category,.amount): This represents sensitive behavioral data collection, which is a major governance gap you need to highlight.
+
+
+GDPR Requirements Mapping for NovaCred
+
+Lawful Basis (Article 6): The analysis of the dataset reveals a complete lack of a "consent tracking mechanism". NovaCred engages in "sensitive behavioral data collection", such as spending habits and categories. Processing this level of detailed personal data requires a solid legal basis, such as explicit consent, to comply with European regulations.
+
+
+Data Minimization (Article 5): The system collects information that may not be strictly necessary for evaluating creditworthiness, violating the data minimization principle. Specifically, the "sensitive behavioral data collection"  and the logging of IP addresses should be heavily questioned. We must ask if tracking every single spending category is genuinely indispensable for approving or denying a loan.
+
+
+Storage Limitation (Article 5): Currently, the company has a major governance gap: there is a "missing data retention policy". Without this control in place, historical application records are stored indefinitely, which directly violates the GDPR storage limitation requirement.
+
+
+Right to Erasure (Article 17): We identified that "sensitive PII is stored without protection". Keeping this data in plain text makes it incredibly difficult and risky to properly handle legitimate GDPR Article 17 requests (the right to erasure). For this reason, it is crucial to implement pseudonymization or anonymization techniques to secure these fields.
+
+EU AI ACT CLASSIFICATION
+Classification: Under the EU AI Act, AI systems used to evaluate the creditworthiness of natural persons or establish their credit score are classified as High-Risk AI Systems.
+NovaCred's Compliance Gaps: Because it uses machine learning to make credit decisions, NovaCred is subject to strict requirements for high-risk systems. Currently, they are failing on two major fronts that you need to highlight:
+1.	Transparency: There is "No audit trail for decisions" , making it impossible to explain exactly why a specific model predicted a rejection.
+2.	Human Agency: There is a "Lack of human oversight documentation". The AI Act mandates that high-risk systems be designed to allow humans to oversee the system and override automated decisions.
+
