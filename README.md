@@ -1,12 +1,12 @@
-# DEGO Project - Team 11
-# # Team Members
+# Digital Ecosystems and Governance in Organizations - Team 11
+## Team Members
 - Guillaume Hauben, 72577
 - Patrick Trepte, 60713
 - Lavinia Antonino, 71907
 - Giacomo Castiglioni, 73411
 
 ## Project Description
-This project analyzes the governance risks present in NovaCred’s credit application dataset. As a data governance task force, our objective was to assess data quality issues, detect potential algorithmic bias in loan approval decisions, and identify privacy risks related to the handling of sensitive personal data.
+This project analyzes the governance risks present in NovaCred’s credit application dataset. As a data governance task force, the objective was to assess data quality issues, detect potential algorithmic bias in loan approval decisions, and identify privacy risks related to the handling of sensitive personal data.
 
 The analysis was conducted through three main stages:
 
@@ -17,6 +17,24 @@ The analysis was conducted through three main stages:
 •	Privacy and governance evaluation
 
 The goal of this project is to identify governance risks in automated credit decision systems and propose recommendations to improve transparency, fairness, and regulatory compliance.
+
+## Dataset Overview
+The dataset contains approximately 500 historical credit application records stored in a nested JSON format. Each record represents a single loan application, where rows correspond to individual applicants and columns contain attributes describing their personal information, financial profile, spending behavior, and loan decision outcomes.
+
+Data categories include:
+
+- **Applicant information:** name, email, Social Security Number (SSN), IP address, date of birth, and ZIP code  
+- **Financial attributes:** income, credit history, debt-to-income ratio, and savings balance  
+- **Spending behavior:** categorized spending patterns across different areas  
+- **Loan decision outcomes:** approval status, interest rate, and approved loan amount  
+
+The project uses two versions of the dataset:
+
+**raw_credit_applications.csv**  
+This file contains the original dataset converted from the raw JSON source into CSV format. It preserves all variables in their initial structure, including potential inconsistencies and missing values present in the original data.
+
+**cleaned_credit_applications.csv**  
+This file contains the processed dataset used for analysis. Data cleaning steps included handling missing values, standardizing categorical variables and removing duplicate or inconsistent records to improve data quality for governance and bias analysis.
 
 ## Structure
 - ‘data/‘ - Dataset files
@@ -38,30 +56,6 @@ This project addresses the problem of:
 •	Preparing the data for building a machine learning model capable of predicting credit approval outcomes
 
 Ultimately, the project aims to support data-driven decision-making in credit risk assessment.
-
-The dataset represents historical credit applications submitted by individuals seeking financial credit. Each row corresponds to a single applicant, and each column contains information related to their financial, demographic, or credit profile characteristics.
-
-The dataset includes:
-
-•	Applicant financial information (e.g., income, credit history, debt levels)
-
-•	Personal or demographic attributes (if included and anonymized)
-
-•	Credit-related indicators
-
-•	A target variable indicating whether the credit application was approved or rejected
-
-The raw dataset contains the original data, while the cleaned dataset reflects preprocessing steps such as handling missing values, encoding categorical variables, and removing inconsistencies.
-
-Datasets:
-
-•	raw_credit_applications.csv
-
-This file contains the original, unprocessed dataset, including all variables in their initial format, missing values and potential inconsistencies.
-
-•	cleaned_credit_applications.csv
-
-This file contains the processed dataset used for EDA and potential modeling. Data cleaning steps such as handling missing values, encoding categorical variables, and removing duplicates were applied to the raw dataset.
 
 ### Data Quality Findings:
 
