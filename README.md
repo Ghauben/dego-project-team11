@@ -137,3 +137,6 @@ NovaCred's Compliance Gaps: Because it uses machine learning to make credit deci
 1.	Transparency: There is "No audit trail for decisions" , making it impossible to explain exactly why a specific model predicted a rejection.
 2.	Human Agency: There is a "Lack of human oversight documentation". The AI Act mandates that high-risk systems be designed to allow humans to oversee the system and override automated decisions.
 
+ALGORITHMIC BIAS & FAIRNESS
+Gender Disparate Impact: Our analysis calculated a Disparate Impact (DI) ratio of 0.77 for gender.Regulatory Implications: Because this value falls below the 0.8 threshold (the "four-fifths rule"), it clearly indicates potential disparate impact and systemic discrimination in the lending decisions. 
+For a High-Risk AI System under the EU AI Act, deploying a model with unmitigated bias exposes NovaCred to severe compliance violations, regulatory scrutiny, and reputational damage.
