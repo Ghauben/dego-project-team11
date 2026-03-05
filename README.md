@@ -49,6 +49,47 @@ This file contains the original dataset converted from the raw JSON source into 
 This file contains the processed dataset used for analysis. Data cleaning steps included handling missing values, standardizing categorical variables and removing duplicate or inconsistent records to improve data quality for governance and bias analysis.
 
 ## Data Quality Findings
+The initial dataset contained 502 records and 36 variables extracted from a nested JSON structure. A systematic data quality assessment was conducted to identify structural inconsistencies, missing data patterns, duplicate records, and schema violations.
+
+Duplicate observations were detected based on key identifiers. Specifically:
+
+•	1 duplicate application entry
+
+•	1 duplicate applicant ID
+
+•	2 duplicate Social Security Numbers
+
+These duplicates were removed to prevent distortion in descriptive statistics and downstream decision analysis. After cleaning, the dataset contained 498 unique records.
+
+A missing value audit revealed substantial sparsity in several variables. For example:
+
+•	decision_notes contained 500 missing values (≈99.6%)
+
+•	Several spending behavior variables exhibited had more than 85% missing values
+
+•	Other attributes such as decision_loan_purpose showed ≈90% missing values
+
+Therefore these variables were removed as their analytical reliability is limited.
+Categorical standardization was required for several variables. For example, the gender field contained inconsistent encodings, such as {'Male': 193, 'Female': 193, 'F': 58, 'M': 52, NaN: 2}, which after standardization became {'Female': 251, 'Male': 245, NaN: 2}. This normalization ensured consistent categorical representation across records.
+
+Several schema and validity issues were detected:
+
+•	4 invalid email addresses were removed.
+
+•	2 negative values were detected in financials_credit_history_months (−10 and −3) and were corrected.
+
+•	1 anomalous debt-to-income value was corrected.
+
+•	1 record with annual income equal to 0 was flagged as a potential data quality anomaly.
+
+Additionally, ZIP codes were standardized into zero-padded 5-digit strings, and date of birth values were validated to ensure realistic age ranges.
+
+To reduce privacy risk during analysis, sensitive identifiers were protected:
+
+•	applicant_info_ssn and applicant_info_ip_address were pseudonymized using SHA-256 hashing.
+
+After preprocessing, the cleaned dataset contained 498 observations and 39 variables. Overall, The cleaning process improved schema consistency, reduced duplicate records, corrected invalid values, and enhanced data reliability for subsequent bias and governance analysis.
+
 ## Bias Analysis 
 ## Privacy and Governance Assessment
 PII ANALYSIS:
