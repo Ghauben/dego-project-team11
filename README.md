@@ -173,9 +173,3 @@ Credit scoring systems fall under the High-Risk AI System category of the EU AI 
 
 Overall Recommendation
 Strengthening governance across data quality management, fairness monitoring, privacy protection, and AI oversight will significantly improve the transparency, accountability, and regulatory compliance of NovaCred’s automated credit decision system.
-
-## Structure
-- ‘data/‘ - Dataset files
-- ‘notebooks/‘ - Jupyter analysis notebooks
-- ‘src/‘ - Python source code
-- ‘reports/‘ - Final deliverables
