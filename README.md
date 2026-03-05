@@ -1,12 +1,17 @@
 # DEGO Project - Team 11
 # # Team Members
-- Guillaume Hauben
-- Patrick Trepte
-- Lavinia Antonino
-- Giacomo Castiglioni
+- Guillaume Hauben, 72577
+- Patrick Trepte, 60713
+- Lavinia Antonino, 71907
+- Giacomo Castiglioni, 73411
 
 ## Project Description
-Credit scoring bias analysis for DEGO course .
+This project analyzes the governance risks present in NovaCred’s credit application dataset. As a data governance task force, our objective was to assess data quality issues, detect potential algorithmic bias in loan approval decisions, and identify privacy risks related to the handling of sensitive personal data.
+The analysis was conducted through three main stages:
+•	Data quality assessment
+•	Bias and fairness analysis
+•	Privacy and governance evaluation
+The goal of this project is to identify governance risks in automated credit decision systems and propose recommendations to improve transparency, fairness, and regulatory compliance.
 
 ## Structure
 - ‘data/‘ - Dataset files
