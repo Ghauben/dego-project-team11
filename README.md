@@ -91,6 +91,32 @@ To reduce privacy risk during analysis, sensitive identifiers were protected:
 After preprocessing, the cleaned dataset contained 498 observations and 39 variables. Overall, The cleaning process improved schema consistency, reduced duplicate records, corrected invalid values, and enhanced data reliability for subsequent bias and governance analysis.
 
 ## Bias Analysis 
+The bias assessment evaluated potential disparities in loan approval outcomes across demographic groups, focusing on gender and age. The analysis used commonly applied fairness metrics including approval rate comparisons, the Disparate Impact (DI) ratio, demographic parity metrics, and chi-square statistical testing.
+
+Gender Bias Analysis:
+
+Approval rates differed across genders. Female applicants had an approval rate of 0.5060, while male applicants had an approval rate of 0.6653. The resulting Disparate Impact Ratio (DIR) was 0.7605, which falls below the four-fifths rule threshold of 0.80, indicating potential gender-based disparate impact.
+
+Statistical testing confirmed the significance of this difference (χ² = 12.31, p = 0.0004). Fairness metrics computed using the Fairlearn library produced consistent results, with a demographic parity difference of 0.1593 and a demographic parity ratio of 0.7605, suggesting that male applicants receive approvals at a higher rate.
+
+Age Group Bias Analysis:
+
+Approval outcomes also varied across age groups. Applicants under 30 had the lowest approval rate (0.3784), while applicants aged 40–50 had the highest (0.7200). 
+
+The disparity between the lowest and highest approval groups produced a Disparate Impact Ratio of 0.5255, well below the 0.80 threshold. A chi-square test confirmed significant variation across age groups (χ² = 20.32, p = 0.0001).
+
+Algorithmic Rejection Patterns:
+
+The analysis also examined rejection reasons to understand the role of automated decision-making. Algorithmic risk scoring accounted for 167 rejected applications, compared with 23 due to insufficient credit history, 12 due to high debt-to-income ratios, and 4 due to low income. Overall, automated risk scoring generated approximately 81% of all rejections, indicating a strong reliance on automated decision logic.
+
+Algorithmic rejection rates also differed by gender. Female applicants had a rejection rate of 0.3984, compared with 0.2735 for male applicants. This difference was statistically significant (χ² = 8.12, p = 0.0044). Age patterns were also observed, with applicants under 30 experiencing the highest algorithmic rejection rate (0.4730) and applicants aged 40–50 the lowest (0.2300).
+
+Proxy Variable Assessment
+
+The analysis also evaluated whether ZIP code could act as a proxy variable for protected attributes. ZIP code was strongly associated with gender (χ² = 390.72, p < 0.001), but showed no significant direct relationship with approval outcomes (χ² = 180.03, p = 0.7558). While ZIP code does not directly influence approval decisions, its strong correlation with gender suggests a potential risk of proxy discrimination if used in predictive models.
+
+Overall, the analysis identified statistically significant disparities in approval outcomes across gender and age groups. The Disparate Impact Ratio for gender (0.7605) and the age-group disparity (0.5255) both fall below the four-fifths rule threshold, indicating potential disparate impact. In addition, the strong reliance on automated risk scoring highlights the need for continuous fairness monitoring and governance controls in automated credit decision systems.
+
 ## Privacy and Governance Assessment
 PII ANALYSIS:
 •	full_name: Direct identifier.
