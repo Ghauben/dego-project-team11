@@ -7,10 +7,15 @@
 
 ## Project Description
 This project analyzes the governance risks present in NovaCred’s credit application dataset. As a data governance task force, our objective was to assess data quality issues, detect potential algorithmic bias in loan approval decisions, and identify privacy risks related to the handling of sensitive personal data.
+
 The analysis was conducted through three main stages:
+
 •	Data quality assessment
+
 •	Bias and fairness analysis
+
 •	Privacy and governance evaluation
+
 The goal of this project is to identify governance risks in automated credit decision systems and propose recommendations to improve transparency, fairness, and regulatory compliance.
 
 ## Structure
