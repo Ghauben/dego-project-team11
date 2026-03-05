@@ -151,6 +151,28 @@ Gender Disparate Impact: Our analysis calculated a Disparate Impact (DI) ratio o
 For a High-Risk AI System under the EU AI Act, deploying a model with unmitigated bias exposes NovaCred to severe compliance violations, regulatory scrutiny, and reputational damage.
 
 ## Governance Recommendations 
+Based on the findings from the data quality, bias, and privacy analyses, several governance measures are recommended to improve the reliability, fairness, and regulatory compliance of NovaCred’s credit decision system.
+
+Data Quality Governance
+
+NovaCred should implement a formal data quality management framework to ensure that the data used in automated credit decisions is reliable and consistent. This includes automated validation checks during data ingestion to detect duplicate identifiers such as Social Security Numbers or applicant IDs. Schema enforcement mechanisms should also be implemented to ensure that all variables follow predefined formats and data types. Additionally, categorical variables should be standardized to avoid inconsistent encodings, and variables with excessive missing values should be regularly monitored and reviewed.
+
+Algorithmic Fairness Governance
+
+The bias analysis revealed disparities in approval outcomes across gender and age groups, with the Disparate Impact Ratio falling below the four-fifths rule threshold. To mitigate fairness risks, NovaCred should introduce regular fairness audits of its credit decision models. These audits should include monitoring fairness metrics such as Disparate Impact and demographic parity.
+NovaCred should also evaluate the use of potential proxy variables, such as ZIP codes, that may indirectly encode protected attributes. In addition, automated credit decision models should be documented to improve transparency and explainability.
+
+Privacy and Data Protection Governance
+
+The dataset contains several forms of personally identifiable information (PII) as well as detailed behavioral data. To reduce privacy risks, NovaCred should implement pseudonymization of sensitive identifiers before analytical processing and enforce role-based access controls that limit access to raw personal data.
+Sensitive data should also be protected through encryption both at rest and in transit. Finally, the organization should adopt data minimization policies to ensure that only data strictly necessary for credit risk evaluation is collected and processed.
+
+AI Governance and Regulatory Compliance
+
+Credit scoring systems fall under the High-Risk AI System category of the EU AI Act, which requires strict governance controls. NovaCred should therefore implement decision logging and audit trails to ensure that automated credit decisions can be reviewed and explained. The organization should also introduce human oversight mechanisms, allowing human reviewers to intervene in automated decisions for high-risk or borderline cases. Additionally, formal model governance documentation, including model risk assessments and model cards, should be maintained.
+
+Overall Recommendation
+Strengthening governance across data quality management, fairness monitoring, privacy protection, and AI oversight will significantly improve the transparency, accountability, and regulatory compliance of NovaCred’s automated credit decision system.
 
 ## Structure
 - ‘data/‘ - Dataset files
