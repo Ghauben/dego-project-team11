@@ -1,9 +1,9 @@
 # Digital Ecosystems and Governance in Organizations - Team 11
 ## Team Members
-- Guillaume Hauben, 72577
-- Patrick Trepte, 60713
-- Lavinia Antonino, 71907
-- Giacomo Castiglioni, 73411
+- Data Engineer: Guillaume Hauben, 72577
+- Data Scientist: Patrick Trepte, 60713
+- Governance Officer: Giacomo Castiglioni, 73411
+- Product Leader: Lavinia Antonino, 71907
 
 ## Executive Summary 
 This project evaluates governance risks in NovaCred’s credit application dataset. As a data governance task force, the objective was to assess data quality issues, identify potential algorithmic bias in loan approval decisions, and analyze privacy risks associated with the processing of sensitive personal data.
