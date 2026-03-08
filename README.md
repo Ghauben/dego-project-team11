@@ -5,7 +5,7 @@
 - Governance Officer: Giacomo Castiglioni, 73411
 - Product Leader: Lavinia Antonino, 71907
 
-## Video Presentation link: 
+## Video Presentation Link: 
 https://drive.google.com/file/d/1FLdZvGIvk6S7IWrtfGEm8tujJnAiIdqd/view?usp=sharing
 
 ## Executive Summary 
@@ -145,13 +145,9 @@ A demonstration of pseudonymization was implemented during the privacy analysis.
 
 EU AI ACT CLASSIFICATION
 Classification: Under the EU AI Act, AI systems used to evaluate the creditworthiness of natural persons or establish their credit score are classified as High-Risk AI Systems.
-NovaCred's Compliance Gaps: Because it uses machine learning to make credit decisions, NovaCred is subject to strict requirements for high-risk systems. Currently, they are failing on two major fronts that you need to highlight:
+NovaCred's Compliance Gaps: Because it uses machine learning to make credit decisions, NovaCred is subject to strict requirements for high-risk systems. Currently, they are failing on two major fronts:
 1.	Transparency: There is "No audit trail for decisions" , making it impossible to explain exactly why a specific model predicted a rejection.
 2.	Human Agency: There is a "Lack of human oversight documentation". The AI Act mandates that high-risk systems be designed to allow humans to oversee the system and override automated decisions.
-
-ALGORITHMIC BIAS & FAIRNESS
-Gender Disparate Impact: Our analysis calculated a Disparate Impact (DI) ratio of 0.77 for gender.Regulatory Implications: Because this value falls below the 0.8 threshold (the "four-fifths rule"), it clearly indicates potential disparate impact and systemic discrimination in the lending decisions. 
-For a High-Risk AI System under the EU AI Act, deploying a model with unmitigated bias exposes NovaCred to severe compliance violations, regulatory scrutiny, and reputational damage.
 
 ## Governance Recommendations 
 Based on the findings from the data quality, bias, and privacy analyses, several governance measures are recommended to improve the reliability, fairness, and regulatory compliance of NovaCred’s credit decision system.
@@ -175,4 +171,4 @@ AI Governance and Regulatory Compliance
 Credit scoring systems fall under the High-Risk AI System category of the EU AI Act, which requires strict governance controls. NovaCred should therefore implement decision logging and audit trails to ensure that automated credit decisions can be reviewed and explained. The organization should also introduce human oversight mechanisms, allowing human reviewers to intervene in automated decisions for high-risk or borderline cases. Additionally, formal model governance documentation, including model risk assessments and model cards, should be maintained.
 
 Overall Recommendation
-Strengthening governance across data quality management, fairness monitoring, privacy protection, and AI oversight will significantly improve the transparency, accountability, and regulatory compliance of NovaCred’s automated credit decision system.i
+Strengthening governance across data quality management, fairness monitoring, privacy protection, and AI oversight will significantly improve the transparency, accountability, and regulatory compliance of NovaCred’s automated credit decision system.
