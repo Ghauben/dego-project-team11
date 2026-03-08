@@ -1,9 +1,12 @@
 # Digital Ecosystems and Governance in Organizations - Team 11
-## Team Members
+## Team Members & Individual Contributions
 - Data Engineer: Guillaume Hauben, 72577
 - Data Scientist: Patrick Trepte, 60713
 - Governance Officer: Giacomo Castiglioni, 73411
 - Product Leader: Lavinia Antonino, 71907
+
+## Video Presentation link: 
+https://drive.google.com/file/d/1FLdZvGIvk6S7IWrtfGEm8tujJnAiIdqd/view?usp=sharing
 
 ## Executive Summary 
 This project evaluates governance risks in NovaCred’s credit application dataset. As a data governance task force, the objective was to assess data quality issues, identify potential algorithmic bias in loan approval decisions, and analyze privacy risks associated with the processing of sensitive personal data.
@@ -118,15 +121,15 @@ The analysis also evaluated whether ZIP code could act as a proxy variable for p
 Overall, the analysis identified statistically significant disparities in approval outcomes across gender and age groups. The Disparate Impact Ratio for gender (0.7605) and the age-group disparity (0.5255) both fall below the four-fifths rule threshold, indicating potential disparate impact. In addition, the strong reliance on automated risk scoring highlights the need for continuous fairness monitoring and governance controls in automated credit decision systems.
 
 ## Privacy and Governance Assessment
-PII ANALYSIS:
-•	full_name: Direct identifier.
-•	email: Direct identifier and contact information.
-•	ssn: Social Security Number, which is highly sensitive PII and a critical national identifier.
-•	ip_address: Online identifier, considered PII under GDPR.
-•	date_of_birth: Indirect identifier, explicitly required to be flagged for an "Excellent" grade.
-•	zip_code: Location data that, when combined with other data (like gender or date of birth), can be used as identifier . 
-•	gender: Protected attribute that requires special handling for bias detection and fairness.
-•	spending_behavior array (.category,.amount): This represents sensitive behavioral data collection, which is a major governance gap you need to highlight.
+PII Analysis:
+- **full_name:** Direct identifier.
+- **email:** Direct identifier and contact information.
+- **ssn:** Social Security Number, highly sensitive PII and a critical national identifier.
+- **ip_address:** Online identifier, considered PII under GDPR.
+- **date_of_birth:** Indirect identifier that can be used in combination with other attributes to re-identify individuals.
+- **zip_code:** Location data that, when combined with other attributes such as gender or date of birth, can serve as an indirect identifier.
+- **gender:** Protected attribute requiring special handling for bias detection and fairness.
+- **spending_behavior array (.category, .amount):** Sensitive behavioral data representing a significant governance gap, as detailed spending patterns may not be strictly necessary for credit risk evaluation.
 
 GDPR Requirements Mapping for NovaCred
 
@@ -172,4 +175,4 @@ AI Governance and Regulatory Compliance
 Credit scoring systems fall under the High-Risk AI System category of the EU AI Act, which requires strict governance controls. NovaCred should therefore implement decision logging and audit trails to ensure that automated credit decisions can be reviewed and explained. The organization should also introduce human oversight mechanisms, allowing human reviewers to intervene in automated decisions for high-risk or borderline cases. Additionally, formal model governance documentation, including model risk assessments and model cards, should be maintained.
 
 Overall Recommendation
-Strengthening governance across data quality management, fairness monitoring, privacy protection, and AI oversight will significantly improve the transparency, accountability, and regulatory compliance of NovaCred’s automated credit decision system.
+Strengthening governance across data quality management, fairness monitoring, privacy protection, and AI oversight will significantly improve the transparency, accountability, and regulatory compliance of NovaCred’s automated credit decision system.i
