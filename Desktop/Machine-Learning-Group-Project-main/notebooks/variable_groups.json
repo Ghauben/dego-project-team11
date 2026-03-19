@@ -1,0 +1,42 @@
+{
+    "Demographic & Personal Background": [
+        "Marital status",
+        "Gender",
+        "Age at enrollment",
+        "Nacionality",
+        "International",
+        "Displaced"
+    ],
+    "Socioeconomic & Family Background": [
+        "Mother's qualification",
+        "Father's qualification",
+        "Mother's occupation",
+        "Father's occupation",
+        "Educational special needs"
+    ],
+    "Enrollment & Application Profile": [
+        "Application mode",
+        "Application order",
+        "Course",
+        "Daytime/evening attendance",
+        "Previous qualification"
+    ],
+    "Financial Status": [
+        "Debtor",
+        "Tuition fees up to date",
+        "Scholarship holder"
+    ],
+    "1st Semester Academic Performance": [
+        "Curricular units 1st sem (credited)",
+        "Curricular units 1st sem (enrolled)",
+        "Curricular units 1st sem (evaluations)",
+        "Curricular units 1st sem (approved)",
+        "Curricular units 1st sem (grade)",
+        "Curricular units 1st sem (without evaluations)"
+    ],
+    "Macroeconomic Context": [
+        "Unemployment rate",
+        "Inflation rate",
+        "GDP"
+    ]
+}
